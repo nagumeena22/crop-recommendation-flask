@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    background: url('agri.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  
+
+  header {
+    background-color: #2ecc71;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+
+  header p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  /* Main Section */
+  main {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 50px;
+    margin: 0 auto;
+  }
+
+  .form-container h2 {
+    background: url('image.jpg')
+    color: #2ecc71;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+  }
+
+  form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: border-color 0.3s ease;
+  }
+
+  form input:focus {
+    border-color: #2ecc71;
+    outline: none;
+  }
+
+  form button {
+    display: block;
+    width: 100%;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  form button:hover {
+    background-color: #27ae60;
+  }
+
+  /* Result Section */
+  .result {
+    margin-top: 50px;
+    text-align: center;
+    background-color: #fff;
+    padding: 50px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  }
+
+  .result h2 {
+    font-size: 3em;
+    color: #2ecc71;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .result p {
+    font-size: 2em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .result .suggestion {
+    font-size: 2.2em;
+    color: #27ae60;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: slideIn 1s ease-out forwards;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2ecc71;
+    color: white;
+    margin-top: 50px;
+  }
+
+  /* Animation */
+  @keyframes slideIn {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .form-container {
+      padding: 20px;
+      margin: 50px auto;
+      width: 90%; /* Change to a percentage */  
+      max-width: 600px;
+    }
+
+    .form-container h2 {
+      font-size: 1.6em;
+    }
+
+    form button {
+      font-size: 1.1em;
+      padding: 12px;
+    }
+
+    .result h2 {
+      font-size: 2.5em;
+    }
+
+    .result p {
+      font-size: 1.6em;
+    }
+
+    .result .suggestion {
+      font-size: 2em;
+    }
+
+  }
+  #predi {
+  font-size: 3rem; /* Large text size */
+  font-weight: bold; /* Bold text */
+  color: #007BFF; /* A beautiful blue color */
+  text-align: center; /* Center the text */
+  padding: 20px; /* Add some padding */
+  background-color: #fff; /* Light blue background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  margin: 20px auto; /* Add spacing around */
+  width: fit-content; /* Adjust the width to the content */
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<title>ML API</title>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind: 300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans +Condensed: 300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}">
+  <title>Crop Prediction</title>
+
+</head>
+
+<body>
+  <div class="login">
+  <header>
+    <h1>Crop Prediction Based on Environmental Factors</h1>
+    <p>Fill out the parameters and get the best crop suggestions for your land</p>
+  </header>
+<BR>
+  <br>
+    <form action="{{url_for('predict')}}" method="post">
+    <section class="form-container">
+      <h2>Enter the Parameters</h2>
+      <form id="prediction-form">
+        <label for="nitrogen">Nitrogen (N) - kg/ha:</label>
+        <input type="number" name="nitrogen" id="nitrogen" required>
+
+        <label for="phosphorus">Phosphorus (P) - kg/ha:</label>
+        <input type="number" name="phosphorus" id="phosphorus"  required>
+
+        <label for="potassium">Potassium (K) - kg/ha:</label>
+        <input type="number" name="potassium" id="potassium" required>
+
+        <label for="temperature">Temperature (°C):</label>
+        <input type="number" name="temperature" id="temperature" required>
+
+        <label for="humidity">Humidity (%):</label>
+        <input type="number" name="humidity" id="humidity" required>
+
+        <label for="ph">Soil pH:</label>
+        <input type="number" name="ph" id="ph" required>
+
+        <label for="rainfall">Rainfall (mm):</label>
+        <input type="number" name="rainfall" id="rainfall" required>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Crop</button>
+      </form>
+    </div>
+ 
+ 
+  <h1 id="predi">
+    {{prediction_text}}
+  </h1>
+  <footer>
+    <p>&copy; 2025 Crop Prediction System. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
